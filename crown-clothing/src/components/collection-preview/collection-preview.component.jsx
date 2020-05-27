@@ -10,7 +10,7 @@ const CollectionPreview = ({ title, items }) => (
     <div className="preview">
       {items
         .filter((item, idx) => idx < 4) //filtering first, based on some condition
-        //then, looping over and returning div
+        //then, looping over and returning Component Collection Item
         .map((item) => (
           <CollectionItem key={item.id} item={item} />
         ))}
