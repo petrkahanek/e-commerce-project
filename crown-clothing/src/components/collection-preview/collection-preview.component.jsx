@@ -11,13 +11,8 @@ const CollectionPreview = ({ title, items }) => (
       {items
         .filter((item, idx) => idx < 4) //filtering first, based on some condition
         //then, looping over and returning div
-        .map(({ id, name, price, imageUrl }) => (
-          <CollectionItem
-            key={id}
-            name={name}
-            price={price}
-            imageUrl={imageUrl}
-          />
+        .map((item) => (
+          <CollectionItem key={item.id} item={item} />
         ))}
     </div>
   </div>
